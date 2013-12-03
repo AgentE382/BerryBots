@@ -25,6 +25,17 @@ function init( ships, world, gfx )
 	height = world:height()
 	teamSize = world:teamSize()
 	width = world:width()
+
+	------------------------------
+	-- Setup
+	------------------------------
+
+	-- names (only in init)
+	for i = 1,#ships do
+		local ship = ships[i]
+		ship:setName("Functional Ship " .. i)
+		ship:setTeamName "Functional Team"
+	end
 end
 
 function run( enemyShips, sensors )
