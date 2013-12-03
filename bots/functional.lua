@@ -7,7 +7,24 @@ function toList( ... )
 end
 
 function init( ships, world, gfx )
+	------------------------------
+	-- Globals
+	------------------------------
 
+	-- userdata
+	world = world
+	gfx = gfx
+
+	-- table
+	ships = toList(ships)
+	constants = world:constants()
+	walls = world:walls()
+	zones = world:zones()
+
+	-- number
+	height = world:height()
+	teamSize = world:teamSize()
+	width = world:width()
 end
 
 function run( enemyShips, sensors )
